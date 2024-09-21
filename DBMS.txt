@@ -1,0 +1,31 @@
+create table student1(Name varchar (25),Regno number (3),Class number(2),Major varchar (10));
+insert into student1 values('Smith',17,1,'CS')
+insert into student1 values('Brown',8,1,'CS')
+select*from student1;
+alter table student1 add section varchar(5);
+update student1 set section=4 where Regno=17;
+select*from student1;
+create table course(courseName varchar (32),courseNumber varchar (8),cretidHours number(8),Department varchar(10));
+insert into course values ('Introduction to CS','CS1310',4,'CS')
+insert into course values ('Data structture','CS3320',4,'CS')
+insert into course values ('Discrete Mathematics','MATH2410',3,'CS')
+insert into course values ('Database Management System','CS3380',3,'CS')
+select*from course;
+create table section(sectionidentifier number (32),courseNumber varchar (8),year number(8),instructor varchar (10));
+insert into section values (85,'MATH2410',98,'KING')
+insert into section values (92,'CS1310',98,'ANDERSON')
+insert into section values (102,'CS3320',99,'KNUTH')
+insert into section values (112,'MATH2410',99,'CHANG')
+insert into section values (119,'CS1310',99,'ANDERSON')
+insert into section values (135,'CS3380',99,'STONE')
+select*from section;
+create table Gradereport(Regno number (32),Secid Number (8),Grade varchar(8));
+insert into Gradereport values (17,112,'B')
+insert into Gradereport values (17,119,'C')
+insert into Gradereport values (8,85,'A')
+insert into Gradereport values (8,92,'A')
+insert into Gradereport values (8,102,'B')
+insert into Gradereport values (8,135,'A')
+select*from Gradereport;
+
+
